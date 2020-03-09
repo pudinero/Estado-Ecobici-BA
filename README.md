@@ -6,3 +6,7 @@ Servicio web basado en Node.js para conocer el estado de todas las estaciones de
 Instale los siguientes módulos de Node
 
 `$ npm install nodemon express cors pug i18n`
+
+## Screenshots
+
+![Index view](https://tienda-ap.herokuapp.com/reposimg/ecobici-index.png)
