@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+html(lang=locale)
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        script(
+            src="https://code.jquery.com/jquery-3.4.1.js",
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"
+            )
+        link(
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css"
+        )
+        link(
+            rel="stylesheet"
+            href="../css/mystyles.css"
+        )
+        link(
+            rel="stylesheet"
+            href="../css/flag-icon.css"
+        )
+    body
+        section(class="section is-fluid")
+            div(class="container")
+                h1(class="title has-text-light", id="StationsQty")= "Let's rock!"
+                div(class="tags subtitle")
+                    span(class="tag is-success", id="AvailableStationsQty")= "~"
+                    span(class="tag is-danger", id="UnavailableStationsQty")= "~"
+                p
+
+                label(class="label is-size-5 has-text-light")= "Buscar por ID"
+                div(class="field has-addons")
+                    div(class="control")
+                        input(class="input is-left is-rounded" type="text" id="IDFinderInput")
+                    div(class="control")
+                        a(class="button is-success is-rounded" id="SearchBtn")= "Buscar"
+            
+            section(class="section is-fluid")
+                div(class="container")
+                    div(class="columns")
+                        div(class="column")
+                            h1(class="is-size-5 has-text-light" id="SearchResult")= ""
+                        div(class="column")
+                            h1(class="is-size-5 has-text-light" id="MapResult")= ""
+                    
+
+        script(src="../data.js")
+            

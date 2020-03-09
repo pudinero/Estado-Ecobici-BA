@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h1 id="h1_StationID">
+        <!-- var message -->
+    </h1>
+
+    <script>
+        var StationID 
+        alert(StationID)
+        console.log(StationID)
+
+        const StationStatusURL = "https://apitransporte.buenosaires.gob.ar/ecobici/gbfs/stationStatus?client_id=acaba42ea0ae4223856533a37848e261&client_secret=B93D8Dc280a249649608b3Ac0fE8366e"
+
+        $.get(StationStatusURL).done(function (data) {
+            console.log(data);
+        });
+
+        /*
+        fetch(StationStatusURL, {
+            mode: 'cors',
+            headers: {
+                'Access-Control-Allow-Origin':'*'
+            }
+        })
+        .then(response => response.text())
+        .then(contents => console.log(contents))
+        .catch(() => console.log("Can’t access " + StationStatusURL + " response. Blocked by browser?"))
+
+        
+        $.getJSON(StationStatusURL, {
+            client_id: "acaba42ea0ae4223856533a37848e261",
+            client_secret: "B93D8Dc280a249649608b3Ac0fE8366e",
+        }, (data) => {
+            console.log(data);
+        })
+        */
+
+        //document.getElementById("h1_StationID").innerText = "Estación: " + StationID
+        
+    </script>
+</body>
+</html>
